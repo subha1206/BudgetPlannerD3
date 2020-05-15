@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Planner</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+  </head>
+  <body class="light-blue darken-3">
+    <header class="light-blue darken-4 section">
+      <h2 class="center white-text">Personal Expenss Tracker</h2>
+      <p class="center grey-text">Personal expnase tracker with D3.js</p>
+    </header>
+
+    <div class="container section">
+      <div class="row">
+        <div class="col s12 m6">
+          <form class="card z-depth-5">
+            <div class="card-content">
+              <span class="card-title indigo-text">Add Expenses</span>
+              <div class="input-field">
+                <input type="text" id="name" />
+                <label for="name">Way of spending</label>
+              </div>
+              <div class="input-field">
+                <input type="number" id="cost" />
+                <label for="cost">Price</label>
+              </div>
+              <div class="input-field center">
+                <button class="btn-large pink white-text">Add to List</button>
+              </div>
+              <div class="input-field center">
+                <p class="red-text" id="error"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col s12 m5 push-m1">
+          <div class="canvas"></div>
+        </div>
+      </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyC3TOvYA7NwgCkwPB6u8DsF174iSBU-G4M",
+        authDomain: "d3-chart1.firebaseapp.com",
+        databaseURL: "https://d3-chart1.firebaseio.com",
+        projectId: "d3-chart1",
+        storageBucket: "d3-chart1.appspot.com",
+        messagingSenderId: "56545612160",
+        appId: "1:56545612160:web:58e5ec3bc5456edbd83165",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    </script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./app.js"></script>
+    <script src="./graph.js"></script>
+  </body>
+</html>
