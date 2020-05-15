@@ -19,6 +19,6 @@ form.addEventListener("submit", (e) => {
         cost.value = "";
       });
   } else {
-    error.textContent = "Please Enter Some value";
+    error.textContent = "!Please Enter Some value, Databases are really stupid";
   }
 });
